@@ -1,9 +1,10 @@
-create database test;
+create database test_env;
 
-use test;
+use test_env;
 
-create table cust1(
-c1 int, 
-c2 int);
+--inporting flat files for tables Test and Products
 
-select * from cust1;
+select * from dbo.test;
+
+select * from dbo.products;
+
