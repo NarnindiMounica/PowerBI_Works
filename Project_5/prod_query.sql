@@ -22,3 +22,14 @@ where product_id = 21;
 update prod set product_id = 11
 where product_id = 22;
 
+--joining both tables using left join
+
+select * into common_table
+from (
+select a.order_date_dd_mm_yyyy, a.availability, a.demand, b.product_id, b.product_name, b.unit_price from prod as a
+left join products as b
+on a.product_id = b.product_id
+) x
+
+select * from common_table
+
